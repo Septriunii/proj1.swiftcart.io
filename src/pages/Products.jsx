@@ -1,7 +1,12 @@
 import Navbar from "../componets/Navbar";
-import products from "../data/products";
+import products from "../data/MAIN/products";
+import electronics from "../data/electronics";
+import { useState } from "react";
 
 function Products() {
+  const shuffledProducts = electronics.sort(() => 0.5 - Math.random()); // Shuffle the products array randomly
+  const productsToShow = shuffledProducts.slice(0, 5); // Extract the first 5 products
+
   const addToCart = (product) => {
     // Get the existing cart items from local storage or initialize an empty array
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -66,26 +71,22 @@ function Products() {
         </div>
       </div>
 
-      <div className="flex flex-col bg-red-600 justify-center items-center p-2 rounded">
-        Electronics
+      <div>
+        RANDOM 5
         <div className="grid grid-cols-3 gap-3">
-          {products
-            .filter((p) => p.category === "electronics")
-            .map((p) => (
-              <div
-                key={p.id}
-                className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
-              >
-                <p>{p.name}</p>
-                <p>$ {p.price}</p>
-                <button onClick={() => addToCart(p)} className="w-full">
-                  Add to cart
-                </button>
-                <button onClick={() => purchase(p)} className="w-full">
-                  Purchase
-                </button>
-              </div>
-            ))}
+          {productsToShow.map((p) => (
+            <div
+              key={p.id}
+              className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
+            >
+              <p>{p.name}</p>
+              <p>$ {p.price}</p>
+              <button onClick={() => addToCart(p)} className="w-full">
+                Add to cart
+              </button>
+              <button onClick={() => purchase(p)}>Purchase</button>
+            </div>
+          ))}
         </div>
       </div>
     </div>
