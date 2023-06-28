@@ -1,0 +1,48 @@
+<div className="flex flex-col bg-red-600 justify-center items-center p-2 rounded">
+        Food but expensive
+        <div className="grid grid-cols-3 gap-3">
+          {products
+            .filter(
+              (p) => p.category.includes("cheap") && p.category.includes("food")
+            )
+            .map((p) => (
+              <div
+                key={p.id}
+                className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
+              >
+                <p>{p.name}</p>
+                <p>$ {p.price}</p>
+                <button onClick={() => addToCart(p)} className="w-full">
+                  Add to cart
+                </button>
+                <button onClick={() => purchase(p)} className="w-full">
+                  Purchase
+                </button>
+              </div>
+            ))}
+        </div>
+      </div>
+
+
+      <div className="flex flex-col bg-red-600 justify-center items-center p-2 rounded">
+        Electronics
+        <div className="grid grid-cols-3 gap-3">
+          {products
+            .filter((p) => p.category === "electronics")
+            .map((p) => (
+              <div
+                key={p.id}
+                className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
+              >
+                <p>{p.name}</p>
+                <p>$ {p.price}</p>
+                <button onClick={() => addToCart(p)} className="w-full">
+                  Add to cart
+                </button>
+                <button onClick={() => purchase(p)} className="w-full">
+                  Purchase
+                </button>
+              </div>
+            ))}
+        </div>
+      </div>
