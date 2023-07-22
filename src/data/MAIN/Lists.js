@@ -1,0 +1,275 @@
+const productsLists = [
+  {
+    id: 1,
+    name: "Electronics",
+    link: "/electronics",
+    subcategories: [
+      "Mobile Phones",
+      "Laptops and Computers",
+      "Televisions",
+      "Audio and Video Devices",
+      "Gaming Consoles",
+    ],
+  },
+  {
+    id: 2,
+    name: "Food and Beverages",
+    subcategories: [
+      "Snacks and Confectionery",
+      "Beverages",
+      "Dairy and Eggs",
+      "Canned and Packaged Foods",
+      "Baking and Cooking Ingredients",
+    ],
+  },
+  {
+    id: 3,
+    name: "Fashion and Apparel",
+    subcategories: [
+      "Clothing",
+      "Shoes and Footwear",
+      "Accessories",
+      "Jewelry",
+      "Watches",
+    ],
+  },
+  {
+    id: 4,
+    name: "Home and Kitchen Appliances",
+    subcategories: [
+      "Kitchen Appliances",
+      "Home Appliances",
+      "Cookware and Bakeware",
+      "Home Decor and Lighting",
+      "Furniture",
+    ],
+  },
+  {
+    id: 5,
+    name: "Beauty and Personal Care",
+    subcategories: [
+      "Skincare Products",
+      "Haircare Products",
+      "Makeup and Cosmetics",
+      "Fragrances and Perfumes",
+      "Personal Care Appliances",
+    ],
+  },
+  {
+    id: 6,
+    name: "Health and Fitness",
+    subcategories: [
+      "Fitness Equipment",
+      "Vitamins and Supplements",
+      "Sports Nutrition",
+      "Yoga and Meditation",
+      "Personal Care",
+    ],
+  },
+  {
+    id: 7,
+    name: "Baby and Kids",
+    subcategories: [
+      "Baby Care",
+      "Toys and Games",
+      "Kids Clothing",
+      "School Supplies",
+      "Baby Gear",
+    ],
+  },
+  {
+    id: 8,
+    name: "Books and Stationery",
+    subcategories: [
+      "Fiction",
+      "Non-Fiction",
+      "School Books",
+      "Office Supplies",
+      "Art and Craft Supplies",
+    ],
+  },
+  {
+    id: 9,
+    name: "Sports and Outdoors",
+    subcategories: [
+      "Outdoor Recreation",
+      "Sports Equipment",
+      "Fitness Accessories",
+      "Camping and Hiking",
+      "Water Sports",
+    ],
+  },
+  {
+    id: 10,
+    name: "Automotive and Motorcycles",
+    subcategories: [
+      "Auto Parts and Accessories",
+      "Motorcycle Parts and Accessories",
+      "Car Care and Maintenance",
+      "Motorcycle Gear",
+      "Tires and Wheels",
+    ],
+  },
+  {
+    id: 11,
+    name: "Pet Care",
+    subcategories: [
+      "Dog Supplies",
+      "Cat Supplies",
+      "Fish and Aquatic Supplies",
+      "Bird Supplies",
+      "Small Animal Supplies",
+    ],
+  },
+  {
+    id: 12,
+    name: "Home Decor and Furniture",
+    subcategories: [
+      "Wall Art and Decor",
+      "Home Textiles",
+      "Furniture",
+      "Lighting",
+      "Home Organization",
+    ],
+  },
+  {
+    id: 13,
+    name: "Jewelry and Accessories",
+    subcategories: ["Necklaces", "Earrings", "Bracelets", "Rings", "Watches"],
+  },
+  {
+    id: 14,
+    name: "Toys and Games",
+    subcategories: [
+      "Action Figures",
+      "Board Games",
+      "Puzzles",
+      "Outdoor Toys",
+      "Building Sets",
+    ],
+  },
+  {
+    id: 15,
+    name: "Office Supplies",
+    subcategories: [
+      "Pens and Writing Instruments",
+      "Notebooks and Paper",
+      "Desk Accessories",
+      "Office Electronics",
+      "Organization and Storage",
+    ],
+  },
+  {
+    id: 16,
+    name: "Tools and Hardware",
+    subcategories: [
+      "Power Tools",
+      "Hand Tools",
+      "Tool Storage",
+      "Hardware Accessories",
+      "Safety and Security",
+    ],
+  },
+  {
+    id: 17,
+    name: "Travel and Luggage",
+    subcategories: [
+      "Luggage Sets",
+      "Travel Accessories",
+      "Backpacks and Bags",
+      "Travel Electronics",
+      "Travel Organization",
+    ],
+  },
+  {
+    id: 18,
+    name: "Garden and Outdoor",
+    subcategories: [
+      "Outdoor Furniture",
+      "Gardening Tools",
+      "Outdoor Decor",
+      "Outdoor Lighting",
+      "Grills and Outdoor Cooking",
+    ],
+  },
+  {
+    id: 19,
+    name: "Musical Instruments",
+    subcategories: [
+      "Guitars",
+      "Keyboards",
+      "Drums and Percussion",
+      "Wind Instruments",
+      "Audio and Recording Equipment",
+    ],
+  },
+  {
+    id: 20,
+    name: "Party Supplies",
+    subcategories: [
+      "Party Decorations",
+      "Party Tableware",
+      "Party Favors",
+      "Balloons",
+      "Costumes and Accessories",
+    ],
+  },
+  {
+    id: 21,
+    name: "Arts and Crafts",
+    subcategories: [
+      "Painting",
+      "Drawing",
+      "Craft Kits",
+      "Scrapbooking",
+      "Sewing and Needlework",
+    ],
+  },
+  {
+    id: 22,
+    name: "Cameras and Photography",
+    subcategories: [
+      "Digital Cameras",
+      "Camera Lenses",
+      "Photography Accessories",
+      "Video Cameras",
+      "Camera Bags and Cases",
+    ],
+  },
+  {
+    id: 23,
+    name: "Movies, Music, and Entertainment",
+    subcategories: [
+      "Movies and TV Shows",
+      "Music",
+      "Video Games",
+      "Concert Tickets",
+      "Books and Magazines",
+    ],
+  },
+  {
+    id: 24,
+    name: "Mobile Accessories",
+    subcategories: [
+      "Phone Cases",
+      "Screen Protectors",
+      "Chargers and Cables",
+      "Headphones and Earphones",
+      "Mobile Power Banks",
+    ],
+  },
+  {
+    id: 25,
+    name: "Gifts and Collectibles",
+    subcategories: [
+      "Gift Cards",
+      "Collectible Figurines",
+      "Personalized Gifts",
+      "Novelty Items",
+      "Gift Wrapping Supplies",
+    ],
+  },
+  // Rest of the categories...
+];
+
+export default productsLists;

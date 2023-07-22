@@ -46,3 +46,51 @@
             ))}
         </div>
       </div>
+
+
+
+      {/* Choose specific products  */}
+      <div className="flex flex-col bg-blue-600 justify-center items-center p-2 rounded">
+        Food
+        <div className="grid grid-cols-3 gap-3">
+          {products
+            .filter((p) => p.category === "food")
+            .map((p) => (
+              <div
+                key={p.id}
+                className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
+              >
+                <p>{p.name}</p>
+                <p>$ {p.price}</p>
+                <button onClick={() => addToCart(p)} className="w-full">
+                  Add to cart
+                </button>
+                <button onClick={() => purchase(p)} className="w-full">
+                  Purchase
+                </button>
+              </div>
+            ))}
+        </div>
+      </div>
+
+
+      const shuffledProducts = electronics.sort(() => 0.5 - Math.random()); // Shuffle the products array randomly
+      const productsToShow = shuffledProducts.slice(0, 5); // Extract the first 5 products
+      <div>
+        RANDOM 5
+        <div className="grid grid-cols-3 gap-3">
+          {productsToShow.map((p) => (
+            <div
+              key={p.id}
+              className="bg-slate-800 flex gap-2 mb-2 flex-col p-2 rounded items-center h-auto"
+            >
+              <p>{p.name}</p>
+              <p>$ {p.price}</p>
+              <button onClick={() => addToCart(p)} className="w-full">
+                Add to cart
+              </button>
+              <button onClick={() => purchase(p)}>Purchase</button>
+            </div>
+          ))}
+        </div>
+      </div>

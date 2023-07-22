@@ -1,0 +1,36 @@
+import img from "../../assets/imgBG.jpg";
+
+const electronics = [
+  { id: 121, name: "iPhone 12", price: 999, img: img },
+  { id: 122, name: "AirPods Pro", price: 249 },
+  { id: 123, name: "Galaxy Watch", price: 349 },
+  { id: 124, name: "MacBook Air", price: 999 },
+  { id: 125, name: "Sony A7 III", price: 1999 },
+  { id: 126, name: "Nintendo Switch", price: 299 },
+  { id: 127, name: "Google Nest Hub", price: 99 },
+  { id: 128, name: "Fitbit Charge 4", price: 149 },
+  { id: 129, name: "Xbox One S", price: 299 },
+  { id: 1210, name: "GoPro Hero 9", price: 449 },
+  { id: 1211, name: "Kindle Paperwhite", price: 129 },
+  { id: 1212, name: "Sony WH-1000XM4", price: 349 },
+  { id: 1213, name: "iPad Mini", price: 399 },
+  { id: 1214, name: "Canon EOS M50", price: 599 },
+  { id: 1215, name: "Bose SoundLink", price: 129 },
+  { id: 1216, name: "Samsung Frame TV", price: 999 },
+  { id: 1217, name: "DJI Mavic Mini", price: 399 },
+  { id: 1218, name: "Apple TV 4K", price: 179 },
+  { id: 1219, name: "Garmin Forerunner 245", price: 299 },
+  { id: 1220, name: "PlayStation 5", price: 499 },
+  { id: 1221, name: "iMac Pro", price: 4999 },
+  { id: 1222, name: "Roku Streaming Stick", price: 49 },
+  { id: 1223, name: "Fujifilm Instax Mini", price: 69 },
+  { id: 1224, name: "HP Spectre X360", price: 1099 },
+  { id: 1225, name: "Nikon Z6", price: 1999 },
+  { id: 1226, name: "Sony RX100", price: 999 },
+  { id: 1227, name: "Microsoft Surface Pro", price: 799 },
+  { id: 1228, name: "JBL Flip 5", price: 119 },
+  { id: 1229, name: "DJI Phantom 4", price: 1299 },
+  { id: 1230, name: "LG OLED TV", price: 1499 },
+];
+
+export default electronics;
