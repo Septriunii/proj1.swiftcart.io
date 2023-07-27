@@ -1,6 +1,6 @@
 import electronics from "../products/electronics";
 import kitchenUtensils from "../products/kitchenUtensils";
-import food from "../products/food";
+import food from "../products/foodAndBeverages";
 
 const products = [...electronics, ...kitchenUtensils, ...food];
 
