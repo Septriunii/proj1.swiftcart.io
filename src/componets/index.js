@@ -1,8 +1,7 @@
 import Body from "../componets/Body";
 import Footer from "../componets/Footer";
 import Ads from "../componets/Home/Ads";
-import Catergories from "../componets/Home/Categories";
-import Discription from "../componets/Home/Description";
+import Description from "../componets/Home/Description";
 import Discover from "../componets/Home/Discover";
 import Flashdeals from "../componets/Home/Flashdeals";
 import MidAds from "../componets/Home/MidAds";
@@ -13,8 +12,7 @@ export {
   Body,
   Footer,
   Ads,
-  Catergories,
-  Discription,
+  Description,
   Discover,
   Flashdeals,
   MidAds,

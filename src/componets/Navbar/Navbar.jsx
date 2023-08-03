@@ -18,7 +18,7 @@ function Navbar() {
   };
 
   return (
-    <div className="h-20 w-full flex items-center justify-between gap-5 fixed top-0 bg-slate-800 z-50 p-2">
+    <div className="h-20 w-full flex items-center justify-between gap-5 fixed top-0 bg-zinc-900 z-50 p-2 border-b-[1px] border-b-neutral-600">
       <div className="h-full w-auto flex gap-10 items-center">
         <div className="h-auto w-5 mr-5 z-50">
           {/* Hamb */}
@@ -46,8 +46,8 @@ function Navbar() {
           <img src={search} alt="" />
         </button>
       </div>
-      <div className="hamburger" onClick={toggleRectangle}>
-        <div className=" h-8 w-8 bg-slate-300 items-center flex mr-3 rounded-full p-1 border-2 border-black">
+      <div className="hamburger pr-10" onClick={toggleRectangle}>
+        <div className=" h-8 w-8 bg-slate-300 items-center flex rounded-full p-1 border-2 border-black ">
           <img src={person} alt="" />
         </div>
       </div>

@@ -4,6 +4,9 @@ import Products from "./pages/Main/Products";
 import Carts from "./pages/Main/Carts";
 import Purchased from "./pages/Main/Purchased";
 import Electronics from "./pages/minor/Electronics";
+import Food from "./pages/minor/Food";
+import Fashion from "./pages/minor/Fashion";
+import Health from "./pages/minor/Health";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
         <Route path="/carts" element={<Carts />} />
         <Route path="/purchase" element={<Purchased />} />
         <Route path="/electronics" element={<Electronics />} />
+        <Route path="/food" element={<Food />} />
+        <Route path="/fashion" element={<Fashion />} />
+        <Route path="/health" element={<Health />} />
       </Routes>
     </Router>
   );

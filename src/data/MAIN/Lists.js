@@ -1,3 +1,8 @@
+import electronics from "../../assets/electronics.jpeg";
+import fashion from "../../assets/fashion.jpg";
+import fitness from "../../assets/fitness.jpg";
+import food from "../../assets/food.jpg";
+
 const productsLists = [
   {
     id: 1,
@@ -10,10 +15,13 @@ const productsLists = [
       "Audio and Video Devices",
       "Gaming Consoles",
     ],
+    img: electronics,
   },
+
   {
     id: 2,
     name: "Food and Beverages",
+    link: "/food",
     subcategories: [
       "Snacks and Confectionery",
       "Beverages",
@@ -21,10 +29,12 @@ const productsLists = [
       "Canned and Packaged Foods",
       "Baking and Cooking Ingredients",
     ],
+    img: food,
   },
   {
     id: 3,
     name: "Fashion and Apparel",
+    link: "/fashion",
     subcategories: [
       "Clothing",
       "Shoes and Footwear",
@@ -32,32 +42,13 @@ const productsLists = [
       "Jewelry",
       "Watches",
     ],
+    img: fashion,
   },
+
   {
     id: 4,
-    name: "Home and Kitchen Appliances",
-    subcategories: [
-      "Kitchen Appliances",
-      "Home Appliances",
-      "Cookware and Bakeware",
-      "Home Decor and Lighting",
-      "Furniture",
-    ],
-  },
-  {
-    id: 5,
-    name: "Beauty and Personal Care",
-    subcategories: [
-      "Skincare Products",
-      "Haircare Products",
-      "Makeup and Cosmetics",
-      "Fragrances and Perfumes",
-      "Personal Care Appliances",
-    ],
-  },
-  {
-    id: 6,
     name: "Health and Fitness",
+    link: "/health",
     subcategories: [
       "Fitness Equipment",
       "Vitamins and Supplements",
@@ -65,53 +56,8 @@ const productsLists = [
       "Yoga and Meditation",
       "Personal Care",
     ],
+    img: fitness,
   },
-  {
-    id: 7,
-    name: "Baby and Kids",
-    subcategories: [
-      "Baby Care",
-      "Toys and Games",
-      "Kids Clothing",
-      "School Supplies",
-      "Baby Gear",
-    ],
-  },
-  {
-    id: 8,
-    name: "Books and Stationery",
-    subcategories: [
-      "Fiction",
-      "Non-Fiction",
-      "School Books",
-      "Office Supplies",
-      "Art and Craft Supplies",
-    ],
-  },
-  {
-    id: 9,
-    name: "Sports and Outdoors",
-    subcategories: [
-      "Outdoor Recreation",
-      "Sports Equipment",
-      "Fitness Accessories",
-      "Camping and Hiking",
-      "Water Sports",
-    ],
-  },
-  {
-    id: 10,
-    name: "Automotive and Motorcycles",
-    subcategories: [
-      "Auto Parts and Accessories",
-      "Motorcycle Parts and Accessories",
-      "Car Care and Maintenance",
-      "Motorcycle Gear",
-      "Tires and Wheels",
-    ],
-  },
-
-  // Rest of the categories...
 ];
 
 export default productsLists;

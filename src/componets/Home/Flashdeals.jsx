@@ -1,43 +1,10 @@
 import products from "../../data/MAIN/products";
 import CountdownApp from "../Countdown";
-import React, { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 function Flashdeals() {
-  const [addToCartLoadingStates, setAddToCartLoadingStates] = useState({});
   const [purchaseLoadingStates, setPurchaseLoadingStates] = useState({});
-  const [addedProductIds, setAddedProductIds] = useState([]);
   const [purchasedProductIds, setPurchasedProductIds] = useState([]);
-
-  const addToCart = useCallback((product) => {
-    setAddToCartLoadingStates((prevState) => ({
-      ...prevState,
-      [product.id]: true,
-    }));
-
-    // Simulate a loading time of 2 seconds
-    setTimeout(() => {
-      // Get the existing cart items from local storage or initialize an empty array
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      // Add the selected product to the cart
-      cartItems.push(product);
-      // Update the cart items in local storage
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-      setAddToCartLoadingStates((prevState) => ({
-        ...prevState,
-        [product.id]: false,
-      }));
-
-      setAddedProductIds((prevIds) => [...prevIds, product.id]);
-
-      // Reset the added product ids after 2 seconds
-      setTimeout(() => {
-        setAddedProductIds((prevIds) =>
-          prevIds.filter((id) => id !== product.id)
-        );
-      }, 2000);
-    }, 2000);
-  }, []);
 
   const purchase = useCallback((product) => {
     setPurchaseLoadingStates((prevState) => ({
@@ -82,10 +49,10 @@ function Flashdeals() {
 
   return (
     <div>
-      <div className="bg-zinc-900 w-full h-auto p-3 flex flex-col">
+      <div className="bg-zinc-900 w-full h-auto p-3 flex flex-col border-[1px] border-neutral-700">
         <div className="flex gap-2  h-auto items-center p-3 mb-3">
-          <div className="bg-green-950 w-20 ml-3 h-full p-2">Flashdeal</div>
-          <div className="bg-black p-2 h-full text-red-800 text-sm font-semibold">
+          <div className="font-bold h-full p-2">Flashdeal</div>
+          <div className="p-2 h-full text-orange-600 bg-black bg-opacity-40 text-sm font-semibold">
             <CountdownApp />
           </div>
         </div>
@@ -97,12 +64,19 @@ function Flashdeals() {
             >
               <img src={p.img} alt="" className="bg-cover h-full" />
               <div className="absolute top-3 left-3 text-sm">
-                <p className="bg-green-800 p-2 rounded-sm">30% off</p>
+                <p className="bg-blue-950 font-medium p-2 text-xs rounded-sm">
+                  {p.off}% off
+                </p>
               </div>
               <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
                 <div className="w-full flex flex-col text-sm">
                   <p className="font-bold">{p.name}</p>
-                  <p>$ {p.price}</p>
+                  <div className="flex gap-2">
+                    <p className="line-through text-gray-300">$ {p.price}</p>
+                    <p className="">
+                      $ {(p.price - (p.price * p.off) / 100).toFixed(2)}
+                    </p>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-1 h-full text-sm">
                   <button

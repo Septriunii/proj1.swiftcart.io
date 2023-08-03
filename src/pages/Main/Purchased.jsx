@@ -74,6 +74,10 @@ function Purchased() {
                             Cancel Order
                           </button>
                         </div>
+                        <p className="absolute right-10 opacity-50">
+                          will arrive in{" "}
+                          {item.days > 1 ? `${item.days} days` : "1 day"}
+                        </p>
                       </li>
                     );
                   })}

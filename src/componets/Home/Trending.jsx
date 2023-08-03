@@ -89,7 +89,9 @@ function Trending() {
           >
             <img src={p.img} alt="" className="bg-cover h-full" />
             <div className="absolute top-3 left-3 text-sm">
-              <p className="bg-fuchsia-800 p-2 rounded-sm">Trending</p>
+              <p className="bg-orange-700 font-medium p-2 text-xs rounded-sm">
+                Trending
+              </p>
             </div>
             <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
               <div className="w-full flex flex-col text-sm">

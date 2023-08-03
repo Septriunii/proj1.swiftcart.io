@@ -83,8 +83,8 @@ function MidAds() {
   );
   return (
     <div className="bg-zinc-900 h-auto flex p-1 w-full">
-      <div className="bg-slate-900  w-full overflow-hidden h-full flex flex-col ">
-        <div className="bg-red-800 h-auto">
+      <div className="bg-zinc-900  w-full overflow-hidden h-full flex flex-col ">
+        <div className="bg-zinc-800 h-auto">
           <Swipe />
         </div>
         <div className="bg-blue-800 h-auto">
@@ -92,7 +92,7 @@ function MidAds() {
         </div>
       </div>
 
-      <div className="bg-blue-950 h-auto w-full flex flex-col justify-center items-center p-1">
+      <div className=" h-auto w-full flex flex-col justify-center items-center p-1">
         <p className="my-2 font-bold">New Arrival</p>
         <div className="h-auto grid grid-cols-4  gap-1 place-items-center p-2 w-full relative">
           {productsToShow.map((p) => (
@@ -107,10 +107,10 @@ function MidAds() {
                   <p className="font-bold text-xs">{p.name}</p>
                   <p className="text-xs">$ {p.price}</p>
                 </div>
-                <div className="flex flex-row gap-1">
+                <div className="flex flex-col gap-1">
                   <button
                     onClick={() => addToCart(p)}
-                    className={`w-full h-5 flex items-center justify-center ${
+                    className={`w-full h-5 flex items-center justify-center rounded-sm ${
                       addToCartLoadingStates[p.id] ? "loading" : ""
                     } ${addedProductIds.includes(p.id) ? "added" : ""}`}
                     disabled={addToCartLoadingStates[p.id]}
@@ -124,12 +124,12 @@ function MidAds() {
                       )}
                     {!addToCartLoadingStates[p.id] &&
                       addedProductIds.includes(p.id) && (
-                        <span className="button-text">Carted</span>
+                        <span className="text-xs">Carted</span>
                       )}
                   </button>
                   <button
                     onClick={() => purchase(p)}
-                    className={`w-full h-5 flex justify-center items-center ${
+                    className={`w-full h-5 flex justify-center items-center rounded-sm  ${
                       purchaseLoadingStates[p.id] ? "loading" : ""
                     } ${purchasedProductIds.includes(p.id) ? "purchased" : ""}`}
                     disabled={purchaseLoadingStates[p.id]}

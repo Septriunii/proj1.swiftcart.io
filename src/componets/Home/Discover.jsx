@@ -80,8 +80,8 @@ function Discover() {
   );
 
   return (
-    <div className="mt-5 flex flex-col items-center">
-      <div className="p-5">Discover Products</div>
+    <div className="mt-5 flex flex-col items-center border-t-[1px] border-neutral-700">
+      <div className="p-5 font-bold">Discover Products</div>
       <div className="h-auto grid grid-cols-5 grid-rows-4 gap-3 place-items-center p-2 w-full relative bg-zinc-900">
         {productsToShow.map((p) => (
           <div

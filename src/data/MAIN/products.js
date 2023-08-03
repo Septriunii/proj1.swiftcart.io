@@ -1,7 +1,13 @@
 import electronics from "../products/electronics";
-import kitchenUtensils from "../products/kitchenUtensils";
 import food from "../products/foodAndBeverages";
+import fashionAndApparel from "../products/fashionAndApparel";
+import healthAndFitness from "../products/healthAndFitness";
 
-const products = [...electronics, ...kitchenUtensils, ...food];
+const products = [
+  ...electronics,
+  ...food,
+  ...fashionAndApparel,
+  ...healthAndFitness,
+];
 
 export default products;

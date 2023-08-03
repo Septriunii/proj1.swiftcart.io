@@ -1,48 +1,28 @@
-import React from "react";
+import fb from "../assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import twitter from "../assets/twitter.svg";
+import linkedin from "../assets/linkedin.svg";
 
 function Footer() {
   return (
-    <div className="w-full h-auto bg-slate-600 absolute bottom-0">
-      <div className="flex gap-3 ">
-        <div>
-          CUSTOMER SERVICE
-          <ul>
-            <li>Help Center</li>
-            <li>Contact Us</li>
-            <li>Order Tracking</li>
-            <li>Return & Refund</li>
-            <li>Payment Methods</li>
-            <li>Free Shipping</li>
-            <li>SwiftCart Guarantee</li>
-          </ul>
-        </div>
-        <div>
-          ABOUT SWIFTCART
-          <ul>
-            <li>About Us</li>
-            <li>Blog</li>
-            <li>Careers</li>
-            <li>Policies</li>
-            <li>Privacy Policy</li>
-            <li>SwiftCart Mall</li>
-            <li>Seller Centre</li>
-            <li>Flash Deals</li>
-            <li>Media Contact</li>
-          </ul>
-        </div>
-      </div>
-      <div className="h-16 items-center flex bg-red-800">
-        <div>Swiftcart 2023</div>
-
-        <div className="flex">
-          FOLLOW US
-          <ul className="flex">
-            <li>Facebook</li>
-            <li>Instagram</li>
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-          </ul>
-        </div>
+    <div className="justify-between flex w-full p-5 font-semibold items-center pl-16 border-t-[1px] border-neutral-900 h-full">
+      <div>Swiftcart &copy; 2023</div>
+      <div className="flex items-center gap-3">
+        <p className="font-bold">FOLLOW US</p>
+        <ul className="flex gap-2">
+          <li className="h-10 w-10 ">
+            <img src={fb} alt="" />
+          </li>
+          <li className="h-10 w-10 p-0.5">
+            <img src={instagram} alt="" />
+          </li>
+          <li className="h-10 w-10 p-0.5">
+            <img src={twitter} alt="" />
+          </li>
+          <li className="h-10 w-10 p-0.5">
+            <img src={linkedin} alt="" />
+          </li>
+        </ul>
       </div>
     </div>
   );
