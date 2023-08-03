@@ -72,7 +72,14 @@ function Carts() {
                           key={item.id}
                           className="flex items-center justify-between bg-zinc-600 bg-opacity-30 p-1 w-[60%]"
                         >
-                          <div>
+                          <div className="flex items-center">
+                            <div className="h-10 w-10 mr-3">
+                              <img
+                                src={item.img}
+                                alt=""
+                                className="object-cover h-full w-full"
+                              />
+                            </div>
                             {item.name} -{" "}
                             <span className="text-amber-700 font-bold">
                               ${item.price}

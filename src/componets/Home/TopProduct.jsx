@@ -12,7 +12,7 @@ function TopProduct() {
               key={p.id}
               className=" flex gap-2 mb-2 flex-col rounded h-72 w-60 relative bg-slate-900"
             >
-              <img src={p.img} alt="" className="bg-cover h-full " />
+              <img src={p.img} alt="" className="object-cover h-full " />
               <div className=" absolute top-3 left-3 text-sm">
                 <p className="bg-green-900 font-medium p-2 text-xs rounded-sm">
                   Top Product

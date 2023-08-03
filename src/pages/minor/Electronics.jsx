@@ -78,9 +78,9 @@ function Electronics() {
           {electronics.map((p) => (
             <div
               key={p.id}
-              className=" flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3"
+              className="flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3 items-center"
             >
-              <img src={p.img} alt="" className="bg-cover h-full" />
+              <img src={p.img} alt="" className="object-cover h-full w-full" />
               <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
                 <div className="w-full flex flex-col text-sm">
                   <p className="font-bold">{p.name}</p>
