@@ -59,7 +59,7 @@ const Swipe = () => {
         <CurrentComponent />
       </div>
 
-      <div className=" absolute top-20 left-2 h-16 w-10 bg-contain">
+      <div className="absolute top-12 md:top-14 lg:top-20 left-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10 bg-contain">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handlePrev}
@@ -69,7 +69,7 @@ const Swipe = () => {
         </div>
       </div>
 
-      <div className=" absolute top-20 right-2 h-16 w-10 bg-contain">
+      <div className=" absolute top-12 md:top-14 lg:top-20 right-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handleNext}

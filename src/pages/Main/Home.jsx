@@ -10,11 +10,12 @@ import {
   Trending,
 } from "../../componets";
 import CustomerService from "../../componets/Home/CustomerService";
+
 function Home() {
   return (
-    <div className="flex h-auto relative flex-col">
+    <div className="flex ">
       <Body>
-        <div className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-10">
+        <div className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-5">
           <Ads />
           <Trending />
           <TopProduct />
@@ -25,9 +26,9 @@ function Home() {
           <CustomerService />
         </div>
       </Body>
-      <div className=" h-auto p-2 flex justify-between">
+      {/* <div className=" h-auto p-2 flex justify-between">
         <Footer />
-      </div>
+      </div> */}
     </div>
   );
 }

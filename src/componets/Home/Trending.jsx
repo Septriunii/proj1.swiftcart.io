@@ -80,12 +80,12 @@ function Trending() {
   );
 
   return (
-    <div>
-      <div className="h-auto grid grid-cols-5 grid-rows-2 gap-3 place-items-center p-2 w-full relative">
+    <div className="flex">
+      <div className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:grid-rows-2 gap-3 place-items-center p-2 w-full relative">
         {productsToShow.map((p) => (
           <div
             key={p.id}
-            className="flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3 items-center"
+            className="flex mb-2 flex-col rounded h-60 w-full md:h-72 md:w-full lg:h-80 lg:w-full relative bg-slate-900 gap-3 items-center object-cover"
           >
             <img src={p.img} alt="" className="object-cover h-full w-full" />
             <div className="absolute top-3 left-3 text-sm">
@@ -98,7 +98,7 @@ function Trending() {
                 <p className="font-bold">{p.name}</p>
                 <p>$ {p.price}</p>
               </div>
-              <div className="flex flex-col gap-1 h-full text-sm">
+              <div className="flex flex-col gap-1 h-full text-xs md:text-sm">
                 <button
                   onClick={() => addToCart(p)}
                   className={`w-full ${

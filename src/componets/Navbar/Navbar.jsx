@@ -18,38 +18,41 @@ function Navbar() {
   };
 
   return (
-    <div className="h-20 w-full flex items-center justify-between gap-5 fixed top-0 bg-zinc-900 z-50 p-2 border-b-[1px] border-b-neutral-600">
+    <div className="h-auto w-full flex  items-center justify-between gap-5 fixed top-0 bg-zinc-900 z-50 p-4 border-b-[1px] border-b-neutral-600">
       <div className="h-full w-auto flex gap-10 items-center">
-        <div className="h-auto w-5 mr-5 z-50">
+        <div className="md:hidden h-auto w-5 mr-5 z-50">
           {/* Hamb */}
-          <div className="hamburger ml-4" onClick={toggleSideMenu}>
+          <div className="hamburger ml-4 " onClick={toggleSideMenu}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
           </div>
           {showSideMenu && <SideMenu onClose={toggleSideMenu} />}
         </div>
-        <div className="flex gap-2">
-          <div className="h-10 w-10">
+        <div className="hidden md:flex gap-2">
+          <div className="md:h-10 md:w-10 h-7 w-7 md:ml-5">
             <img src={logo} alt="" />
           </div>
           <div className="flex items-center font-semibold">SwiftCart</div>
         </div>
       </div>
-      <div className="h-8 w-auto flex items-center bg-white rounded-sm">
+
+      <div className="md:h-8 w-auto flex items-center bg-white rounded-sm">
         <input
           type="text"
-          className="bg-white w-80 text-black focus:outline-none text-sm ml-3 "
+          className="bg-white md:w-80 w-60 text-black focus:outline-none text-sm ml-3 "
           placeholder="Search for products"
         />
         <button className="bg-white p-2 rounded-md h-8 w-8 hover:border-white ">
           <img src={search} alt="" />
         </button>
       </div>
-      <div className="hamburger pr-10" onClick={toggleRectangle}>
-        <div className=" h-8 w-8 bg-slate-300 items-center flex rounded-full p-1 border-2 border-black ">
-          <img src={person} alt="" />
-        </div>
+
+      <div
+        className=" h-8 w-8 bg-slate-300 items-center hidden md:flex rounded-full p-1 border-2 border-black "
+        onClick={toggleRectangle}
+      >
+        <img src={person} alt="" />
       </div>
       {showRectangle && <Rectangle onClose={toggleRectangle} />}
     </div>

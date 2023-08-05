@@ -56,11 +56,11 @@ function Flashdeals() {
             <CountdownApp />
           </div>
         </div>
-        <div className="grid grid-cols-5 grid-rows-1 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-rows-1 place-items-center gap-3">
           {productsToShow.map((p) => (
             <div
               key={p.id}
-              className="flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3 items-center"
+              className="flex mb-2 flex-col rounded h-56 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center"
             >
               <img src={p.img} alt="" className="object-cover h-full w-full" />
               <div className="absolute top-3 left-3 text-sm">

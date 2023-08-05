@@ -6,26 +6,32 @@ function Products() {
   return (
     <div className="flex">
       <Body>
-        <div className="h-auto grid grid-cols-4 grid-rows-2 gap-3 place-items-center p-2 w-full relative">
-          {productsLists.map((p) => (
-            <div
-              key={p.id}
-              className=" flex mb-2 flex-col rounded h-80 w-60 relative bg-slate-900 gap-3"
-            >
-              <img src={p.img} alt="" className="bg-cover h-full " />
+        <div className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-5">
+          <div className="h-auto grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-3 place-items-center p-2 w-full relative ">
+            {productsLists.map((p) => (
+              <div
+                key={p.id}
+                className=" flex mb-2 flex-col rounded h-60 w-full md:h-80 relative bg-slate-900 m-2 "
+              >
+                <img
+                  src={p.img}
+                  alt=""
+                  className="object-cover h-full w-full"
+                />
 
-              <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
-                <div className="w-full flex flex-col text-sm items-center">
-                  <p className="font-bold">{p.name}</p>
-                </div>
-                <div className="flex flex-col gap-1 h-full text-sm">
-                  <Link to={p.link}>
-                    <button className="w-full">See More</button>
-                  </Link>
+                <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
+                  <div className="w-full flex flex-col text-xs md:text-sm items-center">
+                    <p className="font-bold">{p.name}</p>
+                  </div>
+                  <div className="flex flex-col gap-1 h-full text-xs md:text-sm">
+                    <Link to={p.link}>
+                      <button className="w-full text-white">See More</button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Body>
     </div>

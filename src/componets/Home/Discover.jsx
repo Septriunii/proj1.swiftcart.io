@@ -82,11 +82,11 @@ function Discover() {
   return (
     <div className="mt-5 flex flex-col items-center border-t-[1px] border-neutral-700">
       <div className="p-5 font-bold">Discover Products</div>
-      <div className="h-auto grid grid-cols-5 grid-rows-4 gap-3 place-items-center p-2 w-full relative bg-zinc-900">
+      <div className="h-auto grid grid-cols-3 lg:grid-cols-5 md:grid-cols-4 gap-3 place-items-center p-2 w-full relative bg-zinc-900">
         {productsToShow.map((p) => (
           <div
             key={p.id}
-            className="flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3 items-center"
+            className="flex mb-2 flex-col rounded lg:h-80 md:h-72 h-64 w-full relative bg-slate-900 gap-3 items-center"
           >
             <img src={p.img} alt="" className="object-cover h-full w-full" />
 

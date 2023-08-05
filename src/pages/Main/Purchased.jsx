@@ -28,16 +28,16 @@ function Purchased() {
   };
 
   return (
-    <div>
+    <div className="flex">
       <Body>
         <div className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
-          <div className="font-bold bg-zinc-900 w-full h-auto p-1 flex justify-center">
-            <h1>Purchased Items</h1>
+          <div className="font-bold bg-zinc-900 w-full h-auto p-1 flex justify-center text-xs md:text-sm lg:text-base">
+            <h1>Purchsed Items</h1>
           </div>
           <div className="bg-zinc-900 p-2 w-full min-h-[26rem]">
             {purchasedItems.length === 0 ? (
               <div className="h-full flex items-center justify-center">
-                <p>Your purchase is empty.</p>
+                <p>No purchases</p>
               </div>
             ) : (
               <div>
@@ -55,7 +55,7 @@ function Purchased() {
                     return (
                       <li
                         key={item.id}
-                        className="flex items-center justify-between bg-zinc-600 bg-opacity-30 p-1 w-[60%]"
+                        className="flex items-center justify-between bg-zinc-600 bg-opacity-30 p-1 w-[95%] md:w-[90%] lg:w-[75%]"
                       >
                         <div className="flex items-center">
                           <div className="h-10 w-10 mr-3">
@@ -65,26 +65,27 @@ function Purchased() {
                               className="object-cover h-full w-full"
                             />
                           </div>
-                          {item.name} -{" "}
-                          <span className="text-amber-700 font-bold">
+                          <p className="text-xs md:text-sm lg:text-base">
+                            {item.name} -{" "}
+                          </p>
+                          <span className="text-amber-700 font-bold text-xs md:text-sm lg:text-base">
                             ${item.price}
                           </span>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
+                        <div className="flex items-center justify-center gap-1 md:gap-2 text-xs md:text-sm lg:text-base">
                           <span className="text-neutral-400">
-                            {count > 1 ? `${count} items` : "1 item"}{" "}
+                            {count > 1 ? `x${count}` : "x1"}{" "}
                           </span>
                           <button
-                            className="ml-10"
+                            className="ml-5 md:ml-8 lg:ml-10 "
                             onClick={() => handleCancelOrder(item.id)}
                           >
-                            Cancel Order
+                            Remove
+                          </button>
+                          <button onClick={() => handlePurchase(item.id)}>
+                            Purchase
                           </button>
                         </div>
-                        <p className="absolute right-10 opacity-50">
-                          will arrive in{" "}
-                          {item.days > 1 ? `${item.days} days` : "1 day"}
-                        </p>
                       </li>
                     );
                   })}

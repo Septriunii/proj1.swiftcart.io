@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 function TopProduct() {
   return (
-    <div>
+    <div className="flex">
       <div className="w-full h-auto p-3 flex flex-col bg-zinc-900 border-[1px] border-neutral-700">
         <div className="font-bold ml-3 p-2 mb-5">Top Products</div>
-        <div className="grid grid-cols-4 grid-rows-1 place-items-center overflow-auto ">
+        <div className="grid grid-cols-2 lg:grid-cols-4 place-items-center overflow-hidden gap-4">
           {Lists.map((p) => (
             <div
               key={p.id}
-              className=" flex gap-2 mb-2 flex-col rounded h-72 w-60 relative bg-slate-900"
+              className=" flex gap-2 mb-2 flex-col rounded h-60 w-full md:w-full lg:h-72 lg:w-auto relative bg-slate-900"
             >
               <img src={p.img} alt="" className="object-cover h-full " />
               <div className=" absolute top-3 left-3 text-sm">
