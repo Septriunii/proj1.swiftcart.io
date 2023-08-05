@@ -2,7 +2,7 @@ import productsLists from "../../data/MAIN/Lists";
 
 function CustomerService() {
   return (
-    <div className="flex justify-evenly gap-5  border-t-[1px] border-neutral-700 p-5">
+    <div className="flex justify-evenly gap-5  border-t-[1px] border-neutral-700 p-5 md:flex-row flex-col ">
       <div className="flex gap-10">
         <div>
           <p className="font-bold">ABOUT SWIFTCART</p>

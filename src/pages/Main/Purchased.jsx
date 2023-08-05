@@ -32,7 +32,7 @@ function Purchased() {
       <Body>
         <div className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
           <div className="font-bold bg-zinc-900 w-full h-auto p-1 flex justify-center text-xs md:text-sm lg:text-base">
-            <h1>Purchsed Items</h1>
+            <h1>Purchased Items</h1>
           </div>
           <div className="bg-zinc-900 p-2 w-full min-h-[26rem]">
             {purchasedItems.length === 0 ? (

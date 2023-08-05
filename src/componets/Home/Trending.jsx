@@ -81,7 +81,7 @@ function Trending() {
 
   return (
     <div className="flex">
-      <div className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:grid-rows-2 gap-3 place-items-center p-2 w-full relative">
+      <div className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-3 place-items-center p-2 w-full relative">
         {productsToShow.map((p) => (
           <div
             key={p.id}

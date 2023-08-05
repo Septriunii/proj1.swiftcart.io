@@ -25,10 +25,10 @@ function Home() {
           <Description />
           <CustomerService />
         </div>
+        <div className="absolute w-full left-0 right-0 mt-10 h-auto p-2 flex justify-between">
+          <Footer />
+        </div>
       </Body>
-      {/* <div className=" h-auto p-2 flex justify-between">
-        <Footer />
-      </div> */}
     </div>
   );
 }

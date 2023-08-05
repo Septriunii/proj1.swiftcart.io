@@ -71,13 +71,13 @@ function Fashion() {
   }, []);
 
   return (
-    <div>
+    <div className="flex">
       <Body>
-        <div className="h-auto grid grid-cols-5 grid-rows-2 gap-3 place-items-center p-2 w-full relative">
+        <div className="h-auto grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 gap-4 place-items-center p-2 w-full relative">
           {fashion.map((p) => (
             <div
               key={p.id}
-              className="flex mb-2 flex-col rounded h-80 w-52 relative bg-slate-900 gap-3 items-center"
+              className="flex mb-2 flex-col rounded h-64 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center"
             >
               <img src={p.img} alt="" className="object-cover h-full w-full" />
 

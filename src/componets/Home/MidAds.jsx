@@ -82,7 +82,7 @@ function MidAds() {
     [shuffledProducts]
   );
   return (
-    <div className="bg-zinc-900 h-auto flex p-1 w-full">
+    <div className="bg-zinc-900 h-auto flex p-1 w-full items-center flex-col md:flex-row">
       <div className="bg-zinc-900  w-full overflow-hidden h-full flex flex-col ">
         <div className="bg-zinc-800 h-auto">
           <Swipe />
@@ -94,7 +94,7 @@ function MidAds() {
 
       <div className=" h-auto w-full flex flex-col justify-center items-center p-1">
         <p className="my-2 font-bold">New Arrival</p>
-        <div className="h-auto grid grid-cols-4  gap-1 place-items-center p-2 w-full relative">
+        <div className="h-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-1 place-items-center p-2 w-full relative">
           {productsToShow.map((p) => (
             <div
               key={p.id}

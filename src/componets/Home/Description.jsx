@@ -1,11 +1,11 @@
 function Description() {
   return (
     <div className="flex-col h-auto p-5 text-sm flex gap-7 border-t-[1px] border-neutral-700">
-      <div className="flex flex-col gap-2">
-        <p className="font-bold text-lg">
+      <div className="flex flex-col gap-2 text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg ">
           Your Fast and Reliable Online Shopping Experience
         </p>
-        <p className="leading-6 opacity-75">
+        <p className="leading-6 opacity-75 ">
           Swiftcart is the ultimate online shopping destination that offers a
           seamless and efficient purchasing process. We pride ourselves on
           providing quick delivery and exceptional customer service, making your
@@ -15,9 +15,10 @@ function Description() {
         </p>
       </div>
 
-      <div>
-        <p className="font-bold text-lg">Discover a World of Convenience</p>
-
+      <div className="text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg">
+          Discover a World of Convenience
+        </p>
         <p className="leading-6 opacity-75">
           Experience the joy of shopping without leaving your house. Swiftcart
           offers a diverse selection of products, ranging from trendy fashion
@@ -28,9 +29,10 @@ function Description() {
         </p>
       </div>
 
-      <div>
-        <p className="font-bold text-lg">Swift and Secure Transactions</p>
-
+      <div className="text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg">
+          Swift and Secure Transactions
+        </p>
         <p className="leading-6 opacity-75">
           At Swiftcart, we prioritize your safety and peace of mind. Our secure
           payment methods ensure that your transactions are protected. Choose
@@ -39,9 +41,11 @@ function Description() {
           financial information is handled with the utmost care.
         </p>
       </div>
-      <div>
-        <p className="font-bold text-lg">Effortless Buying Experience</p>
 
+      <div className="text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg">
+          Effortless Buying Experience
+        </p>
         <p className="leading-6 opacity-75">
           We believe that shopping should be enjoyable, so we've streamlined the
           buying process to make it as simple as possible. With Swiftcart, you
@@ -52,9 +56,10 @@ function Description() {
         </p>
       </div>
 
-      <div>
-        <p className="font-bold text-lg">Reliable Delivery Services</p>
-
+      <div className="text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg">
+          Reliable Delivery Services
+        </p>
         <p className="leading-6 opacity-75">
           Swiftcart understands the importance of timely deliveries. We work
           with reputable courier partners to ensure your purchased items reach
@@ -64,11 +69,11 @@ function Description() {
           enjoy your new purchases.
         </p>
       </div>
-      <div>
-        <p className="font-bold text-lg">
+
+      <div className="text-xs md:text-sm">
+        <p className="font-bold text-base lg:text-lg">
           Start Your Swift Shopping Experience Today!
         </p>
-
         <p className="leading-6 opacity-75">
           Don't miss out on the excitement and convenience of Swiftcart.
           Download our app or visit our website to explore our vast selection of
