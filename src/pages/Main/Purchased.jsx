@@ -80,10 +80,7 @@ function Purchased() {
                             className="ml-5 md:ml-8 lg:ml-10 "
                             onClick={() => handleCancelOrder(item.id)}
                           >
-                            Remove
-                          </button>
-                          <button onClick={() => handlePurchase(item.id)}>
-                            Purchase
+                            Cancel
                           </button>
                         </div>
                       </li>
