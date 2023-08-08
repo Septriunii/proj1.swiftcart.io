@@ -26,7 +26,7 @@ function Sidebar() {
 
   return (
     <div>
-      <div className="bg-black bg-opacity-50  w-auto h-96 p-2 flex flex-col gap-7 justify-center items-center fixed top-28">
+      <div className="bg-black bg-opacity-30  w-auto h-96 p-2 flex flex-col gap-7 justify-center items-center fixed top-28">
         <Link to="/">
           <div className="cursor-pointer text-white h-11 w-11 p-1 rounded-sm focus:border-b-2 border-blue-950 flex justify-center flex-col items-center">
             <img src={home} alt="" className="hover:bg-zinc-800 rounded" />

@@ -94,11 +94,13 @@ function Trending() {
               </p>
             </div>
             <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
-              <div className="w-full flex flex-col text-sm">
-                <p className="font-bold">{p.name}</p>
-                <p>$ {p.price}</p>
+              <div className="w-full flex flex-col ">
+                <p className="font-bold lg:text-base md:text-sm text-xs">
+                  {p.name}
+                </p>
+                <p className="md:text-sm text-xs">$ {p.price}</p>
               </div>
-              <div className="flex flex-col gap-1 h-full text-xs md:text-sm">
+              <div className="flex flex-col gap-1 h-full text-xs md:text-sm ">
                 <button
                   onClick={() => addToCart(p)}
                   className={`w-full ${

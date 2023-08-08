@@ -72,7 +72,7 @@ function Flashdeals() {
                 <div className="w-full flex flex-col text-sm">
                   <p className="font-bold">{p.name}</p>
                   <div className="flex gap-2">
-                    <p className="line-through text-gray-300">$ {p.price}</p>
+                    <p className="line-through text-red-300">$ {p.price}</p>
                     <p className="">
                       $ {(p.price - (p.price * p.off) / 100).toFixed(2)}
                     </p>

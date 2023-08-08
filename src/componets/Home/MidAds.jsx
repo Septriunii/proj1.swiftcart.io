@@ -84,10 +84,10 @@ function MidAds() {
   return (
     <div className="bg-zinc-900 h-auto flex p-1 w-full items-center flex-col md:flex-row">
       <div className="bg-zinc-900  w-full overflow-hidden h-full flex flex-col ">
-        <div className="bg-zinc-800 h-auto">
+        <div className=" lg:h-52 h-32 md:h-48">
           <Swipe />
         </div>
-        <div className="bg-blue-800 h-auto">
+        <div className="lg:h-52 h-32 md:h-48">
           <Show />
         </div>
       </div>

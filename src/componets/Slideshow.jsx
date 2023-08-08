@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Slideshow = ({ images, interval = 3000 }) => {
+const Slideshow = ({ images, interval = 4000 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

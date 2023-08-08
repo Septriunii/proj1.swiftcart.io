@@ -1,35 +1,56 @@
 import { useState } from "react";
 import right from "../assets/right-arrow.svg";
 import left from "../assets/left-arrow.svg";
-import ad from "../assets/ad.png";
+import img1 from "../assets/prom/prom-5.png";
+import img2 from "../assets/prom/prom-6.png";
+import img3 from "../assets/prom/prom-7.png";
+import img4 from "../assets/prom/prom-8.png";
 
 // Red component
 const RedComponent = () => (
-  <div className="h-52 component" style={{ backgroundColor: "red" }}>
-    <div className="h-full w-full">
-      <img src={ad} alt="" className="h-full" />
+  <div className="h-52 component">
+    <div className="h-full ">
+      <img src={img1} alt="" className="h-full" />
     </div>
   </div>
 );
 
 // Green component
 const GreenComponent = () => (
-  <div className="h-52 component" style={{ backgroundColor: "green" }}>
-    Green Component
+  <div className="h-52 component">
+    <div className="h-full w-full">
+      <img src={img2} alt="" className="h-full" />
+    </div>
   </div>
 );
 
 // Blue component
 const BlueComponent = () => (
-  <div className="h-52 component" style={{ backgroundColor: "blue" }}>
-    Blue Component
+  <div className="h-52 component">
+    <div className="h-full w-full">
+      <img src={img3} alt="" className="h-full" />
+    </div>
+  </div>
+);
+
+// Blue component
+const Blue3Component = () => (
+  <div className="h-52 component">
+    <div className="h-full w-full">
+      <img src={img4} alt="" className="h-full " />
+    </div>
   </div>
 );
 
 const Swipe = () => {
   const [componentIndex, setComponentIndex] = useState(0);
   const [direction, setDirection] = useState(""); // Track animation direction
-  const components = [RedComponent, GreenComponent, BlueComponent];
+  const components = [
+    RedComponent,
+    GreenComponent,
+    BlueComponent,
+    BlueComponent,
+  ];
 
   const handlePrev = () => {
     setDirection("right-to-left"); // Set animation direction to right-to-left
