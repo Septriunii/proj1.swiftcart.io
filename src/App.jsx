@@ -10,7 +10,7 @@ import Health from "./pages/minor/Health";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/proj1.swiftcart.io">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
