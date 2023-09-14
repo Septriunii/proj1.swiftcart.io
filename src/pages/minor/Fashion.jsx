@@ -77,9 +77,13 @@ function Fashion() {
           {fashion.map((p) => (
             <div
               key={p.id}
-              className="flex mb-2 flex-col rounded h-64 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center"
+              className="flex mb-2 flex-col rounded h-64 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center overflow-hidden"
             >
-              <img src={p.img} alt="" className="object-cover h-full w-full" />
+              <img
+                src={p.img}
+                alt=""
+                className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out"
+              />
 
               <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
                 <div className="w-full flex flex-col text-sm">

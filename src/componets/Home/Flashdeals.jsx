@@ -60,9 +60,13 @@ function Flashdeals() {
           {productsToShow.map((p) => (
             <div
               key={p.id}
-              className="flex mb-2 flex-col rounded h-56 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center"
+              className="flex mb-2 flex-col rounded h-56 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center overflow-hidden"
             >
-              <img src={p.img} alt="" className="object-cover h-full w-full" />
+              <img
+                src={p.img}
+                alt=""
+                className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out"
+              />
               <div className="absolute top-3 left-3 text-sm">
                 <p className="bg-blue-950 font-medium p-2 text-xs rounded-sm">
                   {p.off}% off

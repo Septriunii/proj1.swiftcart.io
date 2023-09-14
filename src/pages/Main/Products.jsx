@@ -11,12 +11,12 @@ function Products() {
             {productsLists.map((p) => (
               <div
                 key={p.id}
-                className=" flex mb-2 flex-col rounded h-60 w-full md:h-80 relative bg-slate-900 m-2 "
+                className=" flex mb-2 flex-col rounded h-60 w-full md:h-80 relative bg-slate-900 m-2 overflow-hidden"
               >
                 <img
                   src={p.img}
                   alt=""
-                  className="object-cover h-full w-full"
+                  className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out"
                 />
 
                 <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
