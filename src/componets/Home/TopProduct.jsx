@@ -1,5 +1,7 @@
 import Lists from "../../data/MAIN/Lists";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function TopProduct() {
   return (
@@ -12,11 +14,16 @@ function TopProduct() {
               key={p.id}
               className=" flex gap-2 mb-2 flex-col rounded h-60 w-full md:w-full lg:h-72 lg:w-auto relative bg-slate-900 overflow-hidden"
             >
-              <img
-                src={p.img}
-                alt=""
-                className="object-cover h-full hover:scale-105 duration-300 ease-in-out"
-              />
+              <div className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out">
+                <LazyLoadImage
+                  src={p.img}
+                  className="object-cover h-full w-full"
+                  height="100%"
+                  width="100%"
+                  effect="blur"
+                  placeholderSrc={p.img}
+                />
+              </div>
               <div className=" absolute top-3 left-3 text-sm">
                 <p className="bg-green-900 font-medium p-2 text-xs rounded-sm">
                   Top Product

@@ -84,7 +84,7 @@ const Swipe = () => {
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handlePrev}
-            className="swipe w-full h-12 z-40 bg-transparent "
+            className="swipe w-full h-12 z-40 bg-transparent"
           ></div>
           <img src={left} alt="" className="h-full absolute opacity-80" />
         </div>

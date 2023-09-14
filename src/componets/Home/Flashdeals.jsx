@@ -1,6 +1,8 @@
 import products from "../../data/MAIN/products";
 import CountdownApp from "../Countdown";
 import { useState, useCallback, useMemo } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Flashdeals() {
   const [purchaseLoadingStates, setPurchaseLoadingStates] = useState({});
@@ -62,11 +64,16 @@ function Flashdeals() {
               key={p.id}
               className="flex mb-2 flex-col rounded h-56 md:h-72 lg:h-80 w-full relative bg-slate-900 gap-3 items-center overflow-hidden"
             >
-              <img
-                src={p.img}
-                alt=""
-                className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out"
-              />
+              <div className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out">
+                <LazyLoadImage
+                  src={p.img}
+                  className="object-cover h-full w-full"
+                  height="100%"
+                  width="100%"
+                  effect="blur"
+                  placeholderSrc={p.img}
+                />
+              </div>
               <div className="absolute top-3 left-3 text-sm">
                 <p className="bg-blue-950 font-medium p-2 text-xs rounded-sm">
                   {p.off}% off
