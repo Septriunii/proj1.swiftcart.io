@@ -1,12 +1,15 @@
+import { lazy } from "react";
+
 import Body from "../componets/Body";
 import Footer from "../componets/Footer";
-import Ads from "../componets/Home/Ads";
-import Description from "../componets/Home/Description";
-import Discover from "../componets/Home/Discover";
-import Flashdeals from "../componets/Home/Flashdeals";
-import MidAds from "../componets/Home/MidAds";
-import TopProduct from "../componets/Home/TopProduct";
 import Trending from "../componets/Home/Trending";
+import Ads from "../componets/Home/Ads";
+
+const Description = lazy(() => import("../componets/Home/Description"));
+const Discover = lazy(() => import("../componets/Home/Discover"));
+const Flashdeals = lazy(() => import("../componets/Home/Flashdeals"));
+const MidAds = lazy(() => import("../componets/Home/MidAds"));
+const TopProduct = lazy(() => import("../componets/Home/TopProduct"));
 
 export {
   Body,

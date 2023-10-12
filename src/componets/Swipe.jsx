@@ -5,12 +5,14 @@ import img1 from "../assets/prom/prom-5.png";
 import img2 from "../assets/prom/prom-6.png";
 import img3 from "../assets/prom/prom-7.png";
 import img4 from "../assets/prom/prom-8.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 // Red component
 const RedComponent = () => (
   <div className="h-52 component">
     <div className="h-full ">
-      <img src={img1} alt="" className="h-full" />
+      <LazyLoadImage loading="eager" src={img1} alt="" className="h-full" />
     </div>
   </div>
 );
@@ -19,7 +21,7 @@ const RedComponent = () => (
 const GreenComponent = () => (
   <div className="h-52 component">
     <div className="h-full w-full">
-      <img src={img2} alt="" className="h-full" />
+      <LazyLoadImage loading="eager" src={img2} alt="" className="h-full" />
     </div>
   </div>
 );
@@ -28,7 +30,7 @@ const GreenComponent = () => (
 const BlueComponent = () => (
   <div className="h-52 component">
     <div className="h-full w-full">
-      <img src={img3} alt="" className="h-full" />
+      <LazyLoadImage loading="eager" src={img3} alt="" className="h-full" />
     </div>
   </div>
 );
@@ -84,7 +86,7 @@ const Swipe = () => {
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handlePrev}
-            className="swipe w-full h-12 z-40 bg-transparent"
+            className="swipe w-full h-12 z-40 bg-transparent "
           ></div>
           <img src={left} alt="" className="h-full absolute opacity-80" />
         </div>

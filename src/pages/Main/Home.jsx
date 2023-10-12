@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   Body,
   Footer,
@@ -18,12 +19,14 @@ function Home() {
         <div className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-5">
           <Ads />
           <Trending />
-          <TopProduct />
-          <Flashdeals />
-          <MidAds />
-          <Discover />
-          <Description />
-          <CustomerService />
+          <Suspense fallback={null}>
+            <TopProduct />
+            <Flashdeals />
+            <MidAds />
+            <Discover />
+            <Description />
+            <CustomerService />
+          </Suspense>
         </div>
         <div className="absolute w-full left-0 right-0 mt-10 h-auto p-2 flex justify-between">
           <Footer />

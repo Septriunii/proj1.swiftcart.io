@@ -80,7 +80,7 @@ function Trending() {
         {productsToShow.map((p) => (
           <div
             key={p.id}
-            className="flex mb-2 flex-col rounded h-60 w-full md:h-72 md:w-full lg:h-80 lg:w-full relative bg-slate-900 gap-3 items-center object-cover overflow-hidden"
+            className="flex mb-2 flex-col rounded h-60 w-full md:h-72 md:w-full lg:h-80 lg:w-full relative gap-3 items-center object-cover overflow-hidden"
           >
             <div className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out">
               <LazyLoadImage
