@@ -28,13 +28,13 @@ function Purchased() {
   };
 
   return (
-    <div className="flex">
+    <main className="flex">
       <Body>
-        <div className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
+        <section className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
           <div className="font-bold bg-zinc-900 w-full h-auto p-1 flex justify-center text-xs md:text-sm lg:text-base">
             <h1>Purchased Items</h1>
           </div>
-          <div className="bg-zinc-900 p-2 w-full min-h-[26rem]">
+          <section className="bg-zinc-900 p-2 w-full min-h-[26rem]">
             {purchasedItems.length === 0 ? (
               <div className="h-full flex items-center justify-center">
                 <p>No purchases</p>
@@ -89,10 +89,10 @@ function Purchased() {
                 </ul>
               </div>
             )}
-          </div>
-        </div>
+          </section>
+        </section>
       </Body>
-    </div>
+    </main>
   );
 }
 

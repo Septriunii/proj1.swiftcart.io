@@ -1,7 +1,7 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import products from "../../data/MAIN/products";
-import React, { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 const LOCAL_STORAGE_KEY_CART = "cartItems";
 const LOCAL_STORAGE_KEY_PURCHASE = "purchaseItems";
@@ -75,14 +75,14 @@ function Trending() {
   }, []);
 
   return (
-    <div className="flex">
-      <div className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 place-items-center p-2 w-full relative">
+    <main className="flex">
+      <section className="h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 place-items-center p-2 w-full relative">
         {productsToShow.map((p) => (
-          <div
+          <main
             key={p.id}
             className="flex mb-2 flex-col rounded h-60 w-full md:h-72 md:w-full lg:h-80 lg:w-full relative gap-3 items-center object-cover overflow-hidden"
           >
-            <div className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out">
+            <figure className="object-cover h-full w-full hover:scale-105 duration-300 ease-in-out">
               <LazyLoadImage
                 src={p.img}
                 className="object-cover h-full w-full"
@@ -91,14 +91,14 @@ function Trending() {
                 effect="blur"
                 placeholderSrc={p.img}
               />
-            </div>
+            </figure>
 
-            <div className="absolute top-3 left-3 text-sm">
+            <section className="absolute top-3 left-3 text-sm">
               <p className="bg-orange-700 font-medium p-2 text-xs rounded-sm">
                 Trending
               </p>
-            </div>
-            <div className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
+            </section>
+            <section className="bg-black bg-opacity-50 w-full  p-2 flex flex-col gap-3 absolute bottom-0">
               <div className="w-full flex flex-col">
                 <p className="font-bold lg:text-base md:text-sm text-xs">
                   {p.name}
@@ -145,11 +145,11 @@ function Trending() {
                     )}
                 </button>
               </div>
-            </div>
-          </div>
+            </section>
+          </main>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

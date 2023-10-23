@@ -1,7 +1,7 @@
 function Description() {
   return (
     <div className="flex-col h-auto p-5 text-sm flex gap-7 border-t-[1px] border-neutral-700">
-      <div className="flex flex-col gap-2 text-xs md:text-sm">
+      <section className="flex flex-col gap-2 text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg ">
           Your Fast and Reliable Online Shopping Experience
         </p>
@@ -13,9 +13,9 @@ function Description() {
           wide range of products from the comfort of your own home, knowing that
           you'll receive your items promptly and hassle-free.
         </p>
-      </div>
+      </section>
 
-      <div className="text-xs md:text-sm">
+      <section className="text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg">
           Discover a World of Convenience
         </p>
@@ -27,9 +27,9 @@ function Description() {
           through an extensive catalog effortlessly. With just a few clicks, you
           can find the perfect item you've been searching for.
         </p>
-      </div>
+      </section>
 
-      <div className="text-xs md:text-sm">
+      <section className="text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg">
           Swift and Secure Transactions
         </p>
@@ -40,9 +40,9 @@ function Description() {
           and other trusted methods. Rest assured that your personal and
           financial information is handled with the utmost care.
         </p>
-      </div>
+      </section>
 
-      <div className="text-xs md:text-sm">
+      <section className="text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg">
           Effortless Buying Experience
         </p>
@@ -54,9 +54,9 @@ function Description() {
           advanced search and personalized recommendations help you find exactly
           what you're looking for quickly.
         </p>
-      </div>
+      </section>
 
-      <div className="text-xs md:text-sm">
+      <section className="text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg">
           Reliable Delivery Services
         </p>
@@ -68,9 +68,9 @@ function Description() {
           anticipate its arrival. With Swiftcart, you won't have to wait long to
           enjoy your new purchases.
         </p>
-      </div>
+      </section>
 
-      <div className="text-xs md:text-sm">
+      <section className="text-xs md:text-sm">
         <p className="font-bold text-base lg:text-lg">
           Start Your Swift Shopping Experience Today!
         </p>
@@ -80,7 +80,7 @@ function Description() {
           products, amazing deals, and seamless shopping experience. Join
           Swiftcart now and experience the future of online shopping.
         </p>
-      </div>
+      </section>
     </div>
   );
 }

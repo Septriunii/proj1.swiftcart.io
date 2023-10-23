@@ -4,55 +4,37 @@ import left from "../assets/left-arrow.svg";
 import img1 from "../assets/prom/prom-5.png";
 import img2 from "../assets/prom/prom-6.png";
 import img3 from "../assets/prom/prom-7.png";
-import img4 from "../assets/prom/prom-8.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-// Red component
-const RedComponent = () => (
-  <div className="h-52 component">
+const FirstSlide = () => (
+  <figure className="h-52 component">
     <div className="h-full ">
       <LazyLoadImage loading="eager" src={img1} alt="" className="h-full" />
     </div>
-  </div>
+  </figure>
 );
 
-// Green component
-const GreenComponent = () => (
-  <div className="h-52 component">
+const SecondSlide = () => (
+  <figure className="h-52 component">
     <div className="h-full w-full">
       <LazyLoadImage loading="eager" src={img2} alt="" className="h-full" />
     </div>
-  </div>
+  </figure>
 );
 
-// Blue component
-const BlueComponent = () => (
-  <div className="h-52 component">
+const ThirdSlide = () => (
+  <figure className="h-52 component">
     <div className="h-full w-full">
       <LazyLoadImage loading="eager" src={img3} alt="" className="h-full" />
     </div>
-  </div>
-);
-
-// Blue component
-const Blue3Component = () => (
-  <div className="h-52 component">
-    <div className="h-full w-full">
-      <img src={img4} alt="" className="h-full " />
-    </div>
-  </div>
+  </figure>
 );
 
 const Swipe = () => {
   const [componentIndex, setComponentIndex] = useState(0);
   const [direction, setDirection] = useState(""); // Track animation direction
-  const components = [
-    RedComponent,
-    GreenComponent,
-    BlueComponent,
-    BlueComponent,
-  ];
+  const components = [FirstSlide, SecondSlide, ThirdSlide, ThirdSlide];
 
   const handlePrev = () => {
     setDirection("right-to-left"); // Set animation direction to right-to-left
@@ -77,12 +59,12 @@ const Swipe = () => {
   const CurrentComponent = components[componentIndex];
 
   return (
-    <div className="relative h-full">
-      <div className={`carousel ${direction} `}>
+    <main className="relative h-full">
+      <figure className={`carousel ${direction} `}>
         <CurrentComponent />
-      </div>
+      </figure>
 
-      <div className="absolute top-12 md:top-14 lg:top-20 left-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10 bg-contain">
+      <section className="absolute top-12 md:top-14 lg:top-20 left-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10 bg-contain">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handlePrev}
@@ -90,9 +72,9 @@ const Swipe = () => {
           ></div>
           <img src={left} alt="" className="h-full absolute opacity-80" />
         </div>
-      </div>
+      </section>
 
-      <div className=" absolute top-12 md:top-14 lg:top-20 right-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10">
+      <section className=" absolute top-12 md:top-14 lg:top-20 right-2 h-8 w-6 md:h-12 md:w-8 lg:h-16 lg:w-10">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handleNext}
@@ -100,8 +82,8 @@ const Swipe = () => {
           ></div>
           <img src={right} alt="" className="h-full absolute opacity-80" />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

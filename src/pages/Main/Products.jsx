@@ -6,9 +6,9 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Products() {
   return (
-    <div className="flex">
+    <main className="flex">
       <Body>
-        <div className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-5">
+        <section className="w-full h-auto bg-zinc-900 bg-opacity-50 p-2 overflow-hidden flex flex-col gap-5">
           <div className="h-auto grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-3 place-items-center p-2 w-full relative ">
             {productsLists.map((p) => (
               <div
@@ -39,9 +39,9 @@ function Products() {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       </Body>
-    </div>
+    </main>
   );
 }
 

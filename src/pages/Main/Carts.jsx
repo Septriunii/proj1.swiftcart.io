@@ -46,9 +46,9 @@ function Carts() {
   };
 
   return (
-    <div className="flex">
+    <main className="flex">
       <Body>
-        <div className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
+        <section className="bg-zinc-900 bg-opacity-50 h-auto flex flex-col items-center gap-2 p-2 justify-center">
           <div className="font-bold bg-zinc-900 w-full h-auto p-1 flex justify-center text-xs md:text-sm lg:text-base">
             <h1>Cart Items</h1>
           </div>
@@ -109,9 +109,9 @@ function Carts() {
               </div>
             )}
           </div>
-        </div>
+        </section>
       </Body>
-    </div>
+    </main>
   );
 }
 

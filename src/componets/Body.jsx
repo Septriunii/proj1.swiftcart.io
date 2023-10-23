@@ -7,16 +7,16 @@ function Body({ children }) {
     <>
       <Navbar />
 
-      <div className=" h-full w-[84rem]  flex md:pr-7 lg:pr-10 flex-col mt-16 pb-5 relative">
-        <div className="flex md:mt-5 relative ">
+      <main className=" h-full w-[84rem]  flex md:pr-7 lg:pr-10 flex-col mt-16 pb-5 relative">
+        <section className="flex md:mt-5 relative ">
           <div className="hidden md:flex">
             <Sidebar />
           </div>
           <div className="flex h-auto w-full p-1 md:ml-16 lg:ml-24">
             <div className="w-full h-auto p-2 ">{children}</div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

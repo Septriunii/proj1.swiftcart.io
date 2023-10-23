@@ -5,9 +5,9 @@ import linkedin from "../assets/linkedin.svg";
 
 function Footer() {
   return (
-    <div className="justify-between flex w-full p-5 font-semibold items-center pl-16 border-t-[1px] border-neutral-900 h-full">
-      <div>Swiftcart &copy; 2023</div>
-      <div className="flex items-center gap-3">
+    <footer className="justify-between flex w-full p-5 font-semibold items-center pl-16 border-t-[1px] border-neutral-900 h-full">
+      <section>Swiftcart &copy; 2023</section>
+      <section className="flex items-center gap-3">
         <p className="font-bold">FOLLOW US</p>
         <ul className="flex gap-2">
           <li className="h-10 w-10 ">
@@ -23,8 +23,8 @@ function Footer() {
             <img src={linkedin} alt="" />
           </li>
         </ul>
-      </div>
-    </div>
+      </section>
+    </footer>
   );
 }
 

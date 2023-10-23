@@ -40,9 +40,9 @@ const CountdownApp = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div>{countdown}</div>
-    </div>
+    </>
   );
 };
 

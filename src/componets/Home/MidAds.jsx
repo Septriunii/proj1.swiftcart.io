@@ -1,4 +1,3 @@
-import React from "react";
 import Swipe from "../Swipe";
 import Show from "../Slidehow2";
 import products from "../../data/MAIN/products";
@@ -84,19 +83,19 @@ function MidAds() {
     [shuffledProducts]
   );
   return (
-    <div className="bg-zinc-900 h-auto flex p-1 w-full items-center flex-col md:flex-row">
-      <div className="bg-zinc-900  w-full overflow-hidden h-full flex flex-col ">
+    <main className="bg-zinc-900 h-auto flex p-1 w-full items-center flex-col md:flex-row">
+      <section className="bg-zinc-900  w-full overflow-hidden h-full flex flex-col ">
         <div className=" lg:h-52 h-32 md:h-48">
           <Swipe />
         </div>
         <div className="lg:h-52 h-32 md:h-48">
           <Show />
         </div>
-      </div>
+      </section>
 
-      <div className=" h-auto w-full flex flex-col justify-center items-center p-1">
+      <section className=" h-auto w-full flex flex-col justify-center items-center p-1">
         <p className="my-2 font-bold">New Arrival</p>
-        <div className="h-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-1 place-items-center p-2 w-full relative">
+        <main className="h-auto grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-1 place-items-center p-2 w-full relative">
           {productsToShow.map((p) => (
             <div
               key={p.id}
@@ -161,9 +160,9 @@ function MidAds() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
+        </main>
+      </section>
+    </main>
   );
 }
 

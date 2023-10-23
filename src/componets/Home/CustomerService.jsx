@@ -3,7 +3,7 @@ import productsLists from "../../data/MAIN/Lists";
 function CustomerService() {
   return (
     <div className="flex justify-evenly gap-5  border-t-[1px] border-neutral-700 p-5 md:flex-row flex-col ">
-      <div className="flex gap-10">
+      <section className="flex gap-10">
         <div>
           <p className="font-bold">ABOUT SWIFTCART</p>
           <ul className="cursor-pointer opacity-70 flex flex-col gap-3 mt-5 text-sm">
@@ -30,9 +30,9 @@ function CustomerService() {
             <li className="hover:underline">SwiftCart Guarantee</li>
           </ul>
         </div>
-      </div>
+      </section>
 
-      <div className=" h-auto flex p-1 flex-col">
+      <section className=" h-auto flex p-1 flex-col">
         <p className="font-bold">CATEGORIES</p>
 
         <div className="container mx-auto p-4 grid grid-cols-2 ">
@@ -52,7 +52,7 @@ function CustomerService() {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

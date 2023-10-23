@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import navs from "../../data/recnav";
 
 function Rectangle({ onClose }) {
   const [isShowing, setIsShowing] = useState(false);
@@ -24,26 +25,15 @@ function Rectangle({ onClose }) {
       }`}
       onAnimationEnd={handleAnimationEnd}
     >
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Your Profile
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Account Info
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Contact Information
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Profile Overview
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Activity Log
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">
-        Help & Support
-      </p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">Settings</p>
-      <p className="cursor-pointer opacity-80 hover:text-gray-500">Logout</p>
+      {navs.map((nav) => (
+        <p
+          key={nav.id}
+          className="cursor-pointer opacity-80 hover:text-gray-500"
+        >
+          {nav.name}
+        </p>
+      ))}
+
       <button
         onClick={handleClick}
         className="right-0 h-10 rounded-full bg-transparent hover:border-transparent absolute -top-14"

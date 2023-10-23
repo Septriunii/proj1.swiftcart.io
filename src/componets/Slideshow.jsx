@@ -18,15 +18,15 @@ const Slideshow = ({ images, interval = 4000 }) => {
   }, [images, interval]);
 
   return (
-    <div className="slideshow">
-      <div className="slideshow-image">
+    <main className="slideshow">
+      <section className="slideshow-image">
         <LazyLoadImage
           effect="blur"
           src={images[currentImageIndex]}
           alt={`Slideshow Image ${currentImageIndex + 1}`}
         />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

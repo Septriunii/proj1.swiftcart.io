@@ -1,5 +1,5 @@
 import products from "../../data/MAIN/products";
-import React, { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -82,9 +82,9 @@ function Discover() {
   );
 
   return (
-    <div className="mt-5 flex flex-col items-center border-t-[1px] border-neutral-700">
-      <div className="p-5 font-bold">Discover Products</div>
-      <div className="h-auto grid grid-cols-3 lg:grid-cols-5 md:grid-cols-4 gap-3 place-items-center p-2 w-full relative bg-zinc-900">
+    <main className="mt-5 flex flex-col items-center border-t-[1px] border-neutral-700">
+      <section className="p-5 font-bold">Discover Products</section>
+      <section className="h-auto grid grid-cols-3 lg:grid-cols-5 md:grid-cols-4 gap-3 place-items-center p-2 w-full relative bg-zinc-900">
         {productsToShow.map((p) => (
           <div
             key={p.id}
@@ -151,8 +151,8 @@ function Discover() {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 

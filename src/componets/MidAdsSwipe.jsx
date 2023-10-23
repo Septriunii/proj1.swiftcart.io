@@ -4,23 +4,23 @@ import left from "../assets/left-arrow.svg";
 import ad from "../assets/ad.png";
 
 // Red component
-const RedComponent = () => (
-  <div className="h-96 component" style={{ backgroundColor: "red" }}>
+const FirstSlide = () => (
+  <section className="h-96 component" style={{ backgroundColor: "red" }}>
     <div className="h-full w-full">
       <img src={ad} alt="" className="h-full" />
     </div>
-  </div>
+  </section>
 );
 
 // Green component
-const GreenComponent = () => (
+const SecondSlide = () => (
   <div className="h-96 component" style={{ backgroundColor: "green" }}>
     Green Component
   </div>
 );
 
 // Blue component
-const BlueComponent = () => (
+const ThirdSlide = () => (
   <div className="h-96 component" style={{ backgroundColor: "blue" }}>
     Blue Component
   </div>
@@ -29,7 +29,7 @@ const BlueComponent = () => (
 const Swipe2 = () => {
   const [componentIndex, setComponentIndex] = useState(0);
   const [direction, setDirection] = useState(""); // Track animation direction
-  const components = [RedComponent, GreenComponent, BlueComponent];
+  const components = [FirstSlide, SecondSlide, ThirdSlide];
 
   const handlePrev = () => {
     setDirection("right-to-left"); // Set animation direction to right-to-left
@@ -54,12 +54,12 @@ const Swipe2 = () => {
   const CurrentComponent = components[componentIndex];
 
   return (
-    <div className="relative h-full">
-      <div className={`carousel ${direction} `}>
+    <main className="relative h-full">
+      <section className={`carousel ${direction} `}>
         <CurrentComponent />
-      </div>
+      </section>
 
-      <div className=" absolute top-1 left-2 h-full w-10 bg-contain">
+      <section className=" absolute top-1 left-2 h-full w-10 bg-contain">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handlePrev}
@@ -67,9 +67,9 @@ const Swipe2 = () => {
           ></div>
           <img src={left} alt="" className="h-full absolute opacity-80" />
         </div>
-      </div>
+      </section>
 
-      <div className=" absolute top-40 right-2 h-auto w-10 bg-contain">
+      <section className=" absolute top-40 right-2 h-auto w-10 bg-contain">
         <div className="w-full h-full relative flex items-center">
           <div
             onClick={handleNext}
@@ -77,8 +77,8 @@ const Swipe2 = () => {
           ></div>
           <img src={right} alt="" className="h-full absolute opacity-80" />
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 
