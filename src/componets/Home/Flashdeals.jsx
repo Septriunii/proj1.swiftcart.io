@@ -1,45 +1,11 @@
 import products from "../../data/MAIN/products";
 import CountdownApp from "../Countdown";
-import { useState, useCallback, useMemo } from "react";
+import { useMemo } from "react";
+import PurchasedButton from "../Template/PurchasedButton";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Flashdeals() {
-  const [purchaseLoadingStates, setPurchaseLoadingStates] = useState({});
-  const [purchasedProductIds, setPurchasedProductIds] = useState([]);
-
-  const purchase = useCallback((product) => {
-    setPurchaseLoadingStates((prevState) => ({
-      ...prevState,
-      [product.id]: true,
-    }));
-
-    // Simulate a loading time of 2 seconds
-    setTimeout(() => {
-      // Get the existing purchase items from local storage or initialize an empty array
-      const purchaseItems =
-        JSON.parse(localStorage.getItem("purchaseItems")) || [];
-      // Add the selected product to the purchase
-      purchaseItems.push(product);
-      // Update the purchase items in local storage
-      localStorage.setItem("purchaseItems", JSON.stringify(purchaseItems));
-
-      setPurchaseLoadingStates((prevState) => ({
-        ...prevState,
-        [product.id]: false,
-      }));
-
-      setPurchasedProductIds((prevIds) => [...prevIds, product.id]);
-
-      // Reset the purchased product ids after 2 seconds
-      setTimeout(() => {
-        setPurchasedProductIds((prevIds) =>
-          prevIds.filter((id) => id !== product.id)
-        );
-      }, 2000);
-    }, 2000);
-  }, []);
-
   const shuffledProducts = useMemo(
     () => products.sort(() => 0.2 - Math.random()),
     []
@@ -89,25 +55,7 @@ function Flashdeals() {
                 </div>
               </div>
               <div className="flex flex-col gap-1 h-full text-sm">
-                <button
-                  onClick={() => purchase(p)}
-                  className={`w-full ${
-                    purchaseLoadingStates[p.id] ? "loading" : ""
-                  } ${purchasedProductIds.includes(p.id) ? "purchased" : ""}`}
-                  disabled={purchaseLoadingStates[p.id]}
-                >
-                  {purchaseLoadingStates[p.id] && (
-                    <div className="loader"></div>
-                  )}
-                  {!purchaseLoadingStates[p.id] &&
-                    !purchasedProductIds.includes(p.id) && (
-                      <span className="button-text">Purchase</span>
-                    )}
-                  {!purchaseLoadingStates[p.id] &&
-                    purchasedProductIds.includes(p.id) && (
-                      <span className="button-text">Purchased</span>
-                    )}
-                </button>
+                <PurchasedButton product={p} />
               </div>
             </div>
           </div>

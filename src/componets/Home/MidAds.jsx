@@ -1,79 +1,13 @@
 import Swipe from "../Swipe";
 import Show from "../Slidehow2";
 import products from "../../data/MAIN/products";
-import { useState, useCallback, useMemo } from "react";
+import { useMemo } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import CartMidButton from "../Template/CartMidButton";
+import PurchaseMidButton from "../Template/PurchaseMidButton";
 
 function MidAds() {
-  const [addToCartLoadingStates, setAddToCartLoadingStates] = useState({});
-  const [purchaseLoadingStates, setPurchaseLoadingStates] = useState({});
-  const [addedProductIds, setAddedProductIds] = useState([]);
-  const [purchasedProductIds, setPurchasedProductIds] = useState([]);
-
-  const addToCart = useCallback((product) => {
-    setAddToCartLoadingStates((prevState) => ({
-      ...prevState,
-      [product.id]: true,
-    }));
-
-    // Simulate a loading time of 2 seconds
-    setTimeout(() => {
-      // Get the existing cart items from local storage or initialize an empty array
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      // Add the selected product to the cart
-      cartItems.push(product);
-      // Update the cart items in local storage
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-      setAddToCartLoadingStates((prevState) => ({
-        ...prevState,
-        [product.id]: false,
-      }));
-
-      setAddedProductIds((prevIds) => [...prevIds, product.id]);
-
-      // Reset the added product ids after 2 seconds
-      setTimeout(() => {
-        setAddedProductIds((prevIds) =>
-          prevIds.filter((id) => id !== product.id)
-        );
-      }, 2000);
-    }, 2000);
-  }, []);
-
-  const purchase = useCallback((product) => {
-    setPurchaseLoadingStates((prevState) => ({
-      ...prevState,
-      [product.id]: true,
-    }));
-
-    // Simulate a loading time of 2 seconds
-    setTimeout(() => {
-      // Get the existing purchase items from local storage or initialize an empty array
-      const purchaseItems =
-        JSON.parse(localStorage.getItem("purchaseItems")) || [];
-      // Add the selected product to the purchase
-      purchaseItems.push(product);
-      // Update the purchase items in local storage
-      localStorage.setItem("purchaseItems", JSON.stringify(purchaseItems));
-
-      setPurchaseLoadingStates((prevState) => ({
-        ...prevState,
-        [product.id]: false,
-      }));
-
-      setPurchasedProductIds((prevIds) => [...prevIds, product.id]);
-
-      // Reset the purchased product ids after 2 seconds
-      setTimeout(() => {
-        setPurchasedProductIds((prevIds) =>
-          prevIds.filter((id) => id !== product.id)
-        );
-      }, 2000);
-    }, 2000);
-  }, []);
-
   const shuffledProducts = useMemo(
     () => products.sort(() => 0.2 - Math.random()),
     []
@@ -118,44 +52,8 @@ function MidAds() {
                   <p className="text-xs">$ {p.price}</p>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <button
-                    onClick={() => addToCart(p)}
-                    className={`w-full h-5 flex items-center justify-center rounded-sm ${
-                      addToCartLoadingStates[p.id] ? "loading" : ""
-                    } ${addedProductIds.includes(p.id) ? "added" : ""}`}
-                    disabled={addToCartLoadingStates[p.id]}
-                  >
-                    {addToCartLoadingStates[p.id] && (
-                      <div className="loader"></div>
-                    )}
-                    {!addToCartLoadingStates[p.id] &&
-                      !addedProductIds.includes(p.id) && (
-                        <span className="text-xs">Cart</span>
-                      )}
-                    {!addToCartLoadingStates[p.id] &&
-                      addedProductIds.includes(p.id) && (
-                        <span className="text-xs">Carted</span>
-                      )}
-                  </button>
-                  <button
-                    onClick={() => purchase(p)}
-                    className={`w-full h-5 flex justify-center items-center rounded-sm  ${
-                      purchaseLoadingStates[p.id] ? "loading" : ""
-                    } ${purchasedProductIds.includes(p.id) ? "purchased" : ""}`}
-                    disabled={purchaseLoadingStates[p.id]}
-                  >
-                    {purchaseLoadingStates[p.id] && (
-                      <div className="loader"></div>
-                    )}
-                    {!purchaseLoadingStates[p.id] &&
-                      !purchasedProductIds.includes(p.id) && (
-                        <span className="text-xs">Purchase</span>
-                      )}
-                    {!purchaseLoadingStates[p.id] &&
-                      purchasedProductIds.includes(p.id) && (
-                        <span className="text-xs">Purchased</span>
-                      )}
-                  </button>
+                  <CartMidButton product={p} />
+                  <PurchaseMidButton product={p} />
                 </div>
               </div>
             </div>
