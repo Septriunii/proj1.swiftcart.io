@@ -30,7 +30,6 @@ function Carts() {
     // Perform purchase logic for the individual item here
     // You can remove the item from the cart, update the database, or perform any other required actions
 
-    // For example, removing the item from the cart after purchase
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
     setCartItems(updatedCartItems);
